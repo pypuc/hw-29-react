@@ -2,6 +2,7 @@
   "name": "hw-29-react",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://pypuc.github.io/hw-29-react/",
   "dependencies": {
     "@reduxjs/toolkit": "^2.12.0",
     "@testing-library/dom": "^10.4.1",
@@ -16,10 +17,12 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx parcel src/index.html",
+    "server": "npx json-server students.json",
+    "build": "parcel build src/index.html --public-url ./",
+    "deploy": "gh-pages -d dist",
+    "predeploy": "npm run build"
   },
   "eslintConfig": {
     "extends": [

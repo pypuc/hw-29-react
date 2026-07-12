@@ -1,25 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import ContactForm from "./features/contacts/ContactForm";
+import ContactList from "./features/contacts/ContactList";
+import Filter from "./features/contacts/Filter";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <h1>Книга контактів</h1>
+      <ContactForm />
+      <h2>Контакти</h2>
+      <Filter />
+      <ContactList />
     </div>
   );
 }
-
-export default App;
